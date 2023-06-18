@@ -1,4 +1,9 @@
 package model;
+/*
+В данном абстрактном классе реализован принцип Dependency Inversion Principle.
+Данный класс не зависит от классов наследников Student, Teacher. при этом классы наследники зависят
+от данного абстрактного класса
+ */
 
 public abstract class User {
     String name;

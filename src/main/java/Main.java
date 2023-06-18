@@ -1,11 +1,7 @@
 import controller.Controller;
-import model.Disciple;
-import model.Student;
-import model.StudyGroup;
-import model.Teacher;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import model.*;
+
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -28,5 +24,19 @@ public class Main {
         StudyGroup group2 = controller.createGroup(americanGroup, teacher2);
         controller.read(group2);
 
+        StudentResidence room101;
+        room101 = controller.createRoom(101, russianGroup);
+
+        StudentResidence room102;
+        room102 = controller.createRoom(102, americanGroup);
+
+
+        List<StudentResidence> rooms = new ArrayList<>();
+        rooms.add(room101);
+        rooms.add(room102);
+
+        for (StudentResidence room : rooms){
+            controller.getRoom(room);
+        }
     }
 }
